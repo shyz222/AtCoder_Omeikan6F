@@ -41,6 +41,7 @@ int main() {
     string V2 = S + S;
     long long R1 = solve(V1);
     long long R2 = solve(V2);
+    //　文字を変更する回数は初項R1,公差R2-R1の等差数列第K項と考えられるから
     cout << R1 + (R2 - R1) * (K - 1LL) << endl;
   }
   return 0;
