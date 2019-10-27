@@ -50,7 +50,7 @@ def scraping():
                     line_message = "本日（{0}） {1}があります".format(
                         date_time, content)
                     print(line_message)
-                    #push_massage(line_message)
+                    push_massage(line_message)
 
             # new content judge
             if len(content_L_old) < len(content_L):
@@ -59,13 +59,13 @@ def scraping():
                     line_message = "新しいコンテストが追加されました\n {0} \n {1}".format(
                         content_L[_num][0], content_L[_num][1])
                     print(line_message)
-                    #push_massage(line_message)
+                    push_massage(line_message)
             content_L_old = copy.copy(content_L)
 
         # error handling
         except:
             line_message = "エラー発生. something is wrong"
-            #push_massage(line_message)
+            push_massage(line_message)
             time.sleep(10)
 
         time.sleep(wait_seconds)
