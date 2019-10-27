@@ -13,13 +13,15 @@ export TARGET_LINE_ID=C4*******************
 ```
 
 LINE_CHANNEL_SECRET:lineのチャンネルシークレット
+
 LINE_CHANNNEL_ACCESS_TOKEN:ラインのアクセストークン
+
 TARGET_LINE_ID：グループもしくは個人のLine id。ただし、この取得は少し特殊。
 
 
 
 - 実行
-``
+```
 nohup python3 line_bot.py &
 ```
 
