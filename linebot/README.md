@@ -2,6 +2,7 @@
 Atcoderからコンテスト情報を取得し、任意の時間ごとにlineグループへコンテスト情報を送信する
 
 # セットアップ手順
+## 手順
 - 各種環境変数取得
 以下のコマンドを実行する
 ```
@@ -21,3 +22,9 @@ TARGET_LINE_ID：グループもしくは個人のLine id。ただし、この�
 ``
 nohup python3 line_bot.py &
 ```
+
+## TARGET_LINE_IDの取得方法
+下記URL参照
+https://www.pnkts.net/2018/06/03/line-messaging-api/
+
+
