@@ -1,3 +1,5 @@
+from urllib import request                                                                                            |import re
+from bs4 import BeautifulSoup
 import re
 import copy
 import time
