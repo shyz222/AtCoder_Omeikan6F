@@ -12,17 +12,14 @@ for val in dic:
 
 ans = 0
 
-print(new_dic)
+#print(new_dic)
 
 for k,v in new_dic.items():
-    if m - v >= 0:
+    if m - v > 0:
         ans += k*v
+        m = m-v
 
-    elif m - v < 0:
+    elif m - v <= 0:
         ans += k*m
         print(ans)
         exit()
-
-    m = m-v
-
-print(ans)
