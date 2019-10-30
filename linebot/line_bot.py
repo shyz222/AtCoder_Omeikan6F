@@ -19,6 +19,7 @@ LINE_BOT_API = LineBotApi(CHANNEL_ACCESS_TOKEN)
 
 def scraping():
     # url
+    print("start")
     url = "https://atcoder.jp/contests/"
     wait_hours = 12
     wait_seconds = wait_hours * 3600
@@ -54,17 +55,19 @@ def scraping():
 
             # new content judge
             if len(content_L_old) < len(content_L):
-                new_content_num = len(content_L_old) - len(content_L)
-                for _num in range(new_content_num, 0):
-                    line_message = "新しいコンテストが追加されました\n {0} \n {1}".format(
-                        content_L[_num][0], content_L[_num][1])
+                new_contents_set = list(set(content_L) - set(content_L_old))
+                print(new_contents_set)
+                for _new_content in new_contents_set:
+                    line_message = "新しいコンテストが追加されました\n {0} \n {1}".format(_new_content[0],_new_content[1])
                     print(line_message)
                     push_massage(line_message)
+
             content_L_old = copy.copy(content_L)
 
         # error handling
         except:
             line_message = "エラー発生. something is wrong"
+            print(line_message)
             push_massage(line_message)
             time.sleep(10)
 
