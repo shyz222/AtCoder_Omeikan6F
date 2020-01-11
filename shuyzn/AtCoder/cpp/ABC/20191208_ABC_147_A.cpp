@@ -5,6 +5,11 @@ using namespace std;
 using ll = long long;
 
 int main() {
-  int n;
+  int a, b, c;
+  cin >> a >> b >> c;
+  if (a + b + c >= 22)
+    cout << "bust" << endl;
+  else
+    cout << "win" << endl;
   return 0;
 }

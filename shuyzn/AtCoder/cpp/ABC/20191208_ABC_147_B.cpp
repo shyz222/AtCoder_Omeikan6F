@@ -5,6 +5,14 @@ using namespace std;
 using ll = long long;
 
 int main() {
-  int n;
+  string s;
+  cin >> s;
+  string t = s;
+  reverse(t.begin(), t.end());
+  int cnt = 0;
+  rep(i, s.length()) {
+    if (s[i] != t[i]) cnt++;
+  }
+  cout << cnt / 2 << endl;
   return 0;
 }

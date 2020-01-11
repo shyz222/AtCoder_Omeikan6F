@@ -7,15 +7,16 @@ int main() {
   ll n;
   cin >> n;
   ll ans = 1e18;  // 10^18のこと
-  // n<=1e12であるので、√nなら計算しきれる（√n=1e6だから）
+  // n<=1e12なのでO(n)はダメ
+  // O(√n)なら計算しきれる（√n=1e6だから）
   // min(a,b)<=√nの性質を利用して解く
   for (ll i = 1; i * i <= n; i++) {
     if (n % i == 0) {
       ll j = n / i;
       ans = min(ans, i + j - 2);
     }
-    cout << ans << endl;
   }
+  cout << ans << endl;
 }
 
 // int main() {
