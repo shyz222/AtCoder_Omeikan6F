@@ -1,4 +1,4 @@
-AWSまとめ①〜Basic&Summary〜
+# AWSまとめ①〜Basic&Summary〜
 
 リージョン
 	AZを地域ごとにグループ分けしたもの
@@ -30,6 +30,6 @@ AWS CLI (Command Line Interface)
 AWS SDK (Software Development Kit)
 	ソフトウェア開発キット
 	対応言語は、Java/.NET/Node.js/Python/Ruby/Goなど
-
+￼
 ↓サービスサマリ↓
 ￼
