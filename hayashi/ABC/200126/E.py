@@ -11,8 +11,8 @@ Last = H%a[xMaxIndex]
 MP_NOW = b[xMaxIndex] * (H//a[xMaxIndex])
 
 for n in range(len(a)):
-  if(a[n] < Last):
-    b[n] = b[n] * (-(-Last//a[n]))
+  if(a[n] < H):
+    b[n] = b[n] * (-(-H//a[n]))
 
 BMinIndex = b.index(min(b))
 count = -(-Last//a[BMinIndex])
