@@ -1,11 +1,19 @@
-S = str(input())
+S = input()[::-1]
+
+cnts = [0]*2019
+cnts[0] = 1
+num = 0
+d = 1
 ans = 0
 
-if len(S) <= 3:
-    print(ans)
-else:   
-    for i in range(0,len(S)-2):
-        for j in range(i+3,len(S)+1):
-            if int(S[i:j]) % 2019 == 0:
-                ans+=1
-    print(ans)
+for i in S:
+    num += int(i) * d
+    d *= 10
+    num %= 2019
+    d %= 2019
+    cnts[num] += 1
+
+for j in cnts:
+    ans += j * (j-1) // 2 
+
+print(ans)
