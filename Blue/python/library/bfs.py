@@ -8,9 +8,15 @@ dist = [inf for i in range(N)]
 visited = [0 for i in range(N)]
 
 for _ in range(M):
+    #辺をpathに追加
     a,b = map(int,input().split())
+    #インデックスのため-1
     a = a - 1
     b = b - 1
+    """
+    頂点aからb,bからaへのパスを追加
+    フォーマットは[[b],[a,c,d]]のようになる
+    """
     path[a].append(b)
     path[b].append(a)
 
