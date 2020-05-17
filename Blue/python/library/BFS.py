@@ -18,9 +18,10 @@ for _ in range(M):
     フォーマットは[[b],[a,c,d]]のようになる
     """
     path[a].append(b)
+    #有向グラフの場合はここを消す
     path[b].append(a)
 
-def bfs(path,root,visited):
+def BFS(path,root,visited):
     #頂点の距離は0
     dist[root] = 0
     #頂点0を初期ノードに設定、訪問済みにする
@@ -46,4 +47,4 @@ def bfs(path,root,visited):
     else:
         return "No"
 
-flag = bfs(path,0,visited)
+flag = BFS(path,0,visited)
