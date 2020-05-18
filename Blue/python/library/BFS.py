@@ -7,6 +7,16 @@ path = [[] for i in range(N)]
 dist = [inf for i in range(N)]
 visited = [0 for i in range(N)]
 
+"""
+    入力形式は
+    N M
+    1 2
+    2 1
+    2 4
+    2 3
+    3 4
+"""
+
 for _ in range(M):
     #辺をpathに追加
     a,b = map(int,input().split())

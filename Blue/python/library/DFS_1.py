@@ -1,6 +1,16 @@
 # 深さ優先探索（行きがけ、帰りがけ）
 from collections import deque
 
+"""
+    入力形式は
+    N M
+    1 2
+    2 1
+    2 4
+    2 3
+    3 4
+"""
+
 # グラフの作成(無向グラフでは#を消す)
 N = int(input())
 graph = [deque([]) for _ in range(N + 1)]
