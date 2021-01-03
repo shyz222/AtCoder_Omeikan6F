@@ -5,6 +5,8 @@ N = Decimal(input())
 
 ans = Decimal("1") / (Decimal("5") ** N)
 
+print(ans)
+
 ansStr = str(ans)
 if "E" not in ansStr:
     print(ansStr)
