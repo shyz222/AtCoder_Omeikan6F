@@ -4,6 +4,7 @@ Q = int(input())
 
 for i in range(Q):
     t, a, b = map(int, input().split())
+    # TLE
     # https://qiita.com/bee2/items/4ab87d05cc03d53e19f9
     if t == 1:
         sa = S[a-1]
