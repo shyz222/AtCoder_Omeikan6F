@@ -18,13 +18,6 @@ for i in range(R):
         maze_row.append(row[j])
     maze.append(maze_row)
 
-# visited = []
-# for i in range(R):
-#     visited_row = []
-#     for j in range(C):
-#         visited_row.append(False)
-#     visited.append(visited_row)
-
 dist = []
 for i in range(R):
     dist.append([-1]*C)
@@ -40,7 +33,6 @@ def in_maze(j, i):
 
 queue = deque()
 queue.append([[start_y, start_x]])
-# visited[start_y][start_x] = True
 dist[start_y][start_x] = 0
 
 count = 0
@@ -56,13 +48,10 @@ while len(queue) > 0:
                 continue
             if maze[y][x] == "#":
                 continue
-            # if visited[y][x] == True:
-            #     continue
             if dist[y][x] != -1:
                 continue
             temp.append([y, x])
             dist[y][x] = dist[i][j] + 1
-            # visited[y][x] = True
     if len(temp) != 0:
         queue.append(temp)
         temp = []
@@ -70,4 +59,3 @@ while len(queue) > 0:
 
 
 print(count)
-# print(dist[goal_y][goal_x])
