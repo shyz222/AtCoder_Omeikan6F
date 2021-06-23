@@ -21,7 +21,7 @@ def SR(n): return [S() for _ in range(n)]
 def LSR(n): return [LS() for _ in range(n)]
 mod = 1000000007
 inf = float("INF")
- 
+
 #solve
 def solve():
     n, m = LI()
