@@ -16,6 +16,11 @@ signed main(){
     cin.tie(0);
     cout.tie(0);
     ios::sync_with_stdio(false);
-    int A,B;
+    int A,B,N;
+    vi vec(N);
+    REP(i,N){
+        cin >> vec[i];
+    }
     cin>>A>>B;
+    cout<<A<<B<<endl;
 }
