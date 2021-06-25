@@ -1,5 +1,5 @@
 #include <bits/stdc++.h>
-#define REP(i, n) for (int i = 0; i < n; i++)
+#define REP(i, a, n) for (int i = a; i < n; i++)
 #define REPR(i, n) for(int i = n; i >= 0; i--)
 #define FOR(i, m, n) for(int i = m; i < n; i++)
 #define endl    '\n'
@@ -18,7 +18,7 @@ signed main(){
     ios::sync_with_stdio(false);
     int A,B,N;
     vi vec(N);
-    REP(i,N){
+    REP(i,0,N){
         cin >> vec[i];
     }
     cin>>A>>B;
