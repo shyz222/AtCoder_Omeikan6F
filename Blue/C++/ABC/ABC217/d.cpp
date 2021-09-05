@@ -16,23 +16,22 @@ signed main(){
     cin.tie(0);
     cout.tie(0);
     ios::sync_with_stdio(false);
-    int L,Q;
-    cin>>L>>Q;
-    tuple<int, int> query;
-    vector<tuple<int, int>> query_list;
-    REP(i,0,Q){
-        cin >> c >> x;
-        query_list.push_back(make_tuple(c, x));
+    int l,q;
+    cin>>l>>q;
+    vi c(q,0), x(q,0);
+    set<int> s {0, l};
+    REP(i,0,q) {
+        cin >> c.at(i) >> x.at(i);
     }
-    vi remain_L(L-1,0);
-    REP(i,0,Q){
-        if(get<0>query_list[i]==1){
-            remain_L[get<1>query_list[i]] = 1;
+    REP(i,0,q) {
+        if(c[i]==1) {
+            s.insert(x[i]);
         }
-        if(get<0>query_list[i]==1){
-            if(remain_L[get<1>query_list[i]]==0){
-
-            }
+        else {
+            int ans;
+            auto l_iter = s.lower_bound(x[i]);
+            ans = *l_iter - *(prev(l_iter));
+            cout << ans << endl;
         }
     }
 }
